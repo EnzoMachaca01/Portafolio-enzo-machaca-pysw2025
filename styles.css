@@ -1,0 +1,305 @@
+/* ==============================
+   Variables de color y tipografías
+   ============================== */
+   :root {
+    --bg-dark: #0E0F11;
+    --text-light: #E8E8E8;
+    --text-secondary: #BABABA;
+    --accent-1: #FF4500;      /* neon orange */
+    --accent-2: #39FF14;      /* neon green */
+    --gradient-accent: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    --font-base: 'Montserrat', sans-serif;
+    --font-logo: 'Pacifico', cursive;
+  }
+  
+  /* Importar fuentes */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Pacifico&display=swap');
+  
+  /* Reset y globales*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-base);
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .icon{
+    width: 8rem !important;
+}
+  /*Navbar*/
+  nav.navbar {
+    background: var(--bg-dark);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    padding: 0.75rem 2rem;
+  }
+  
+  p.logo {
+    font-family: var(--font-logo);
+    font-size: 2rem;
+    color: var(--accent-1);
+    transition: transform 0.3s;
+    text-decoration: none;
+  }
+  
+  .logo:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255,69,0,0.8), 0 6px 20px rgba(57,255,20,0.6);
+    text-decoration: none;
+  }
+
+  .nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    transition: color 0.3s;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-2);
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--accent-2);
+  }
+  
+  .nav-link:hover::after {
+    width: 80%;
+    left: 10%;
+  }
+  #about .user-image{
+    height: 400px;
+    border-radius: 100% !important;
+}
+  /*Jumbotron (sección principal) */
+  #jumbotron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #1A1C1F 0%, var(--bg-dark) 85%);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  #jumbotron h6 {
+    color: var(--accent-2);
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  #jumbotron h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+  }
+  
+  #jumbotron h1 span {
+    color: var(--accent-1);
+  }
+  
+  #jumbotron h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+  }
+  
+  /*  */
+  .btn-primary,
+  #contact a {
+    background: var(--gradient-accent);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255,69,0,0.6), 0 4px 15px rgba(57,255,20,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn-primary:hover,
+  #contact a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,69,0,0.8), 0 6px 20px rgba(57,255,20,0.6);
+  }
+  
+  /* Redes sociales */
+  .sosmed a {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--accent-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-2);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .sosmed a:hover {
+    background: var(--accent-2);
+    color: var(--bg-dark);
+  }
+  
+  section {
+    padding: 4rem 0;
+  }
+  
+  section h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--accent-1);
+  }
+  
+  /* About */
+  #about {
+    background: #181818;
+  }
+  
+  #about img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.9);
+  }
+  
+  #about p {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: justify;
+    line-height: 1.8;
+  }
+  
+  /* Works */
+  #works {
+    background: #1A1C1F;
+  }
+  
+  #works img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  #works img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255,69,0,0.4), 0 8px 30px rgba(57,255,20,0.3);
+  }
+  
+  /* Skills */
+  #skills {
+    background: #181818;
+  }
+  
+  #skills .shadow {
+    background: linear-gradient(135deg, #1A1C1F, #282828);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  #skills .shadow:hover {
+    background: linear-gradient(135deg, #1E1E1E, #333333);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  }
+ 
+  
+  #skills i,
+  #skills img .icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--accent-1);
+  }
+  
+  #skills h5 {
+    color: var(--text-light);
+  }
+  #skills .col-md i{
+    font-size: 8rem !important;
+}
+
+  /* educacion */
+  #educacion {
+    background: #181818;
+  }
+  #educacion .card {
+    background: linear-gradient(135deg, #1A1C1F, #282828);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  #educacion .card:hover {
+    background: linear-gradient(135deg, #1E1E1E, #333333);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  }
+ 
+  /* aprendizaje*/
+
+  #MyLearning {
+    background: var(--bg-dark);
+  }
+ .figure .learning-img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+  /* video */
+  #video{
+    background: #181818;;
+  }
+
+  /* Footer */
+  footer ul{
+    list-style: none;
+  }
+  footer {
+    background: #1A1C1F;
+    padding: 2rem 0;
+    color: var(--text-light);
+  }
+  
+  footer .logo {
+    font-family: var(--font-logo);
+    font-size: 1.75rem;
+    color: var(--accent-1);
+  }
+  
+  footer ul li:first-child {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  footer a:hover {
+    color: var(--accent-2);
+  }
+  
+  footer hr {
+    border-color: #333;
+    margin: 1.5rem 0;
+  }
+  
